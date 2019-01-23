@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bibi Train Scheduler</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="display">
+    <h1>Anytime is Train Time!</h1>
+    <p>Choo Choo. Chee Chee.</p>
+    <p id="time"></p>
+</div>
+<div class="col-md-12">
+<div class="card-body">
+<div class="card-header">Current Train Schedule</div>
+<!-- Table contents  -->
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th class = 'text-center'scope="col">Frequency (min)</th>
+            <th class = 'text-center'scope="col">Next Arrival</th>
+            <th class = 'text-center'scope="col">Minutes Away</th>
+        </tr>
+    </thead>
+    <tbody id="trainSchedule">
+        <!-- schedule will be shown here from Firebase -->
+    </tbody>
+</table>
+</div>
+</div>
+<div class="col-md-12">
+<div class="card-header">Add Train</div>
+<div class="card-body1">
+    <form>
+    <div class="form-group">
+        <label for="trainName"> Train Name</label>
+        <input type="text" class="form-control" id="trainName" required>
+    </div>
+    <div class="form-group">
+            <label for="destination"> Destination</label>
+            <input type="text" class="form-control" id="destination" required>
+        </div>
+        <div class="form-group">
+                <label for="firstTrainTime"> First Train Time(HH:mm - Military Time)</label>
+                <input type="time" class="form-control" id="firstTrainTime" required>
+            </div>
+            <div class="form-group">
+                    <label for="frequency"> Frequency</label>
+                    <input type="text" class="form-control" id="frequency" required>
+                </div>    
+          <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>      
+        </form>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

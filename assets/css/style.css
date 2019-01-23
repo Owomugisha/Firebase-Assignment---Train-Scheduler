@@ -1,0 +1,12 @@
+.display{
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: darkred;
+    margin: 50px;
+}
+.btn-primary{
+    cursor: pointer;
+    
+}
+
